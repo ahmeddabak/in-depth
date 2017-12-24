@@ -56,14 +56,18 @@ module.exports = {
                 test: /\.(png|jpe?g|gif)$/,
                 loader: 'file-loader',
                 options: {
-                    name: 'images/[name].[ext]'
+                    name: '[name].[ext]',
+                    outputPath: 'fonts/',    // where the fonts will go
+                    publicPath: '../'       // override the default path
                 }
             },
             {
                 test: /\.(woff2?|ttf|eot|svg|otf)$/,
                 loader: 'file-loader',
                 options: {
-                    name: 'fonts/[name].[ext]'
+                    name: '[name].[ext]',
+                    outputPath: 'fonts/',    // where the fonts will go
+                    publicPath: '../'       // override the default path
                 }
             }
         ]
@@ -77,8 +81,13 @@ module.exports = {
             minimize: inProduction
         }),
         new WebpackAssetsManifest({
-            output:  path.join(__dirname, 'assets/manifest.json'),
-            publicPath : 'assets/'
+            output: path.join(__dirname, 'assets/manifest.json'),
+            publicPath: 'assets/'
+        }),
+        new webpack.ProvidePlugin({
+            jQuery: 'jquery',
+            $: 'jquery',
+            jquery: 'jquery'
         })
     ]
 };
