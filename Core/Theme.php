@@ -16,6 +16,7 @@ class Theme {
 		$this->enqueueScripts();
 	}
 
+
 	private function enqueueStyles() {
 		add_action( 'wp_enqueue_scripts', function () {
 			wp_enqueue_style( 'theme', asset( 'theme.css' ), array(), null );
