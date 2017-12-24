@@ -78,6 +78,7 @@ module.exports = {
         }),
         new WebpackAssetsManifest({
             output:  path.join(__dirname, 'assets/manifest.json'),
+            publicPath : 'assets/'
         })
     ]
 };

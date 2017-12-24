@@ -9,7 +9,10 @@
   "require": {},
   "autoload": {
     "psr-4": {
-      "InDepth\\": "Core/"
-    }
+      "InDepth\\": "core/"
+    },
+    "files": [
+      "core/helpers.php"
+    ]
   }
 }

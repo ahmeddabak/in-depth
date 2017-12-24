@@ -1,11 +1,11 @@
 {
-  "fonts/fontawesome-webfont.eot": "fonts/fontawesome-webfont.eot",
-  "fonts/fontawesome-webfont.eot?v=4.7.0": "fonts/fontawesome-webfont.eot",
-  "fonts/fontawesome-webfont.svg?v=4.7.0": "fonts/fontawesome-webfont.svg",
-  "fonts/fontawesome-webfont.ttf?v=4.7.0": "fonts/fontawesome-webfont.ttf",
-  "fonts/fontawesome-webfont.woff2?v=4.7.0": "fonts/fontawesome-webfont.woff2",
-  "fonts/fontawesome-webfont.woff?v=4.7.0": "fonts/fontawesome-webfont.woff",
-  "theme.css": "css/theme.9d77ae58ed15ef937f91.css",
-  "theme.js": "js/theme.9d77ae58ed15ef937f91.js",
-  "vendor.js": "js/vendor.fd7585b26ccfda16ed20.js"
+  "fonts/fontawesome-webfont.eot": "assets/fonts/fontawesome-webfont.eot",
+  "fonts/fontawesome-webfont.eot?v=4.7.0": "assets/fonts/fontawesome-webfont.eot",
+  "fonts/fontawesome-webfont.svg?v=4.7.0": "assets/fonts/fontawesome-webfont.svg",
+  "fonts/fontawesome-webfont.ttf?v=4.7.0": "assets/fonts/fontawesome-webfont.ttf",
+  "fonts/fontawesome-webfont.woff2?v=4.7.0": "assets/fonts/fontawesome-webfont.woff2",
+  "fonts/fontawesome-webfont.woff?v=4.7.0": "assets/fonts/fontawesome-webfont.woff",
+  "theme.css": "assets/css/theme.6d1d247a2726d770f601.css",
+  "theme.js": "assets/js/theme.6d1d247a2726d770f601.js",
+  "vendor.js": "assets/js/vendor.18cc543739fabefe63e2.js"
 }

@@ -5,7 +5,12 @@
  * Time: 12:05
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die();
+}
+
 require_once get_template_directory() . '/vendor/autoload.php';
 
 $theme = new \InDepth\Theme();
 $theme->run();
+
