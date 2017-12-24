@@ -1,0 +1,15 @@
+{
+  "name": "ahmeddabak/in-depth",
+  "authors": [
+    {
+      "name": "Ahmed Dabak",
+      "email": "ahmed-dbak@hotmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "InDepth\\": "Core/"
+    }
+  }
+}
