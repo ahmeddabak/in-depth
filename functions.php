@@ -1,16 +1,17 @@
 <?php
 /**
  * Created by Ahmed Dabak
- * Date: 24.12.2017
- * Time: 12:05
+ * Date: 26.12.2017
+ * Time: 00:56
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	die();
-}
 
-require_once get_template_directory() . '/vendor/autoload.php';
+/**
+ * Theme setup and custom theme supports.
+ */
+require __DIR__ . '/includes/setup.php';
 
-$theme = new \InDepth\Theme();
-$theme->run();
-
+/**
+ * Enqueue scripts and styles.
+ */
+require __DIR__ . '/includes/enqueue.php';
