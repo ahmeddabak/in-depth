@@ -196,6 +196,6 @@ class Bs4_Walker_Nav_Menu extends Walker_Nav_menu {
 
 }
 
-function dd( $args ) {
-	die( dump( $args ) );
-}
+//function dd( $args ) {
+//	die( dump( $args ) );
+//}

@@ -7,11 +7,11 @@
  * @package In_Depth
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
-?>
+//if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+//	return;
+//}
+//?>
 
-<aside id="secondary" class="widget-area">
+<aside id="secondary" class="col-md-4 sidebar">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->

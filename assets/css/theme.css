@@ -12772,3 +12772,52 @@ a.text-dark:hover {
   visibility: hidden !important;
 }
 
+body nav {
+  margin-bottom: 2em;
+}
+
+body .content-area .main-content article.article {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+body .content-area .main-content article.article:after {
+  content: "";
+  position: absolute;
+  bottom: -1em;
+  left: 0;
+  right: 0;
+  height: 0.5em;
+  border-top: 1px solid black;
+  z-index: -1;
+}
+
+body .content-area .main-content article.article .article-header {
+  margin-bottom: 2em;
+}
+
+body .content-area .main-content article.article .article-header .article-title {
+  color: black;
+}
+
+body .content-area .main-content article.article .article-header .article-title a {
+  color: black;
+}
+
+body .content-area .main-content article.article .article-image {
+  max-height: 450px;
+  overflow-y: hidden;
+  margin-bottom: 1em;
+}
+
+body aside.sidebar {
+  padding: 2em;
+}
+
+body aside.sidebar .widget {
+  background-color: #e3e3e3;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+

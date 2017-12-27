@@ -25,13 +25,13 @@ if ( ! function_exists( 'in_depth_posted_on' ) ) :
 		);
 
 		$posted_on = sprintf(
-			/* translators: %s: post date. */
+		/* translators: %s: post date. */
 			esc_html_x( 'Posted on %s', 'post date', 'in-depth' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
-			/* translators: %s: post author. */
+		/* translators: %s: post author. */
 			esc_html_x( 'by %s', 'post author', 'in-depth' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
@@ -68,7 +68,7 @@ if ( ! function_exists( 'in_depth_entry_footer' ) ) :
 			comments_popup_link(
 				sprintf(
 					wp_kses(
-						/* translators: %s: post title */
+					/* translators: %s: post title */
 						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'in-depth' ),
 						array(
 							'span' => array(
@@ -85,7 +85,7 @@ if ( ! function_exists( 'in_depth_entry_footer' ) ) :
 		edit_post_link(
 			sprintf(
 				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
+				/* translators: %s: Name of current post. Only visible to screen readers */
 					__( 'Edit <span class="screen-reader-text">%s</span>', 'in-depth' ),
 					array(
 						'span' => array(
@@ -102,36 +102,43 @@ if ( ! function_exists( 'in_depth_entry_footer' ) ) :
 endif;
 
 if ( ! function_exists( 'in_depth_post_thumbnail' ) ) :
-/**
- * Displays an optional post thumbnail.
- *
- * Wraps the post thumbnail in an anchor element on index views, or a div
- * element when on single views.
- */
-function in_depth_post_thumbnail($size = null) {
-	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
-		return;
+	/**
+	 * Displays an optional post thumbnail.
+	 *
+	 * Wraps the post thumbnail in an anchor element on index views, or a div
+	 * element when on single views.
+	 */
+	/**
+	 * @param null $size
+	 * @param array $attributes
+	 */
+	function in_depth_post_thumbnail( $size = 'post-thumbnail', $attributes = '' ) {
+		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+			return;
+		}
+
+		if ( is_singular() ) :
+			?>
+
+            <div class="post-thumbnail">
+				<?php the_post_thumbnail( $size, $attributes ); ?>
+            </div><!-- .post-thumbnail -->
+
+		<?php else : ?>
+
+            <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+				<?php
+
+				$attributes = array_merge( $attributes, array(
+					'alt' => the_title_attribute( array(
+						'echo' => false,
+					) ),
+				) );
+
+				the_post_thumbnail( $size ? $size : 'post-thumbnail', $attributes );
+				?>
+            </a>
+
+		<?php endif; // End is_singular().
 	}
-
-	if ( is_singular() ) :
-	?>
-
-	<div class="post-thumbnail">
-		<?php the_post_thumbnail($size); ?>
-	</div><!-- .post-thumbnail -->
-
-	<?php else : ?>
-
-	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-		<?php
-			the_post_thumbnail( $size ? $size :'post-thumbnail', array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
-		?>
-	</a>
-
-	<?php endif; // End is_singular().
-}
 endif;

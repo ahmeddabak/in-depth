@@ -16,4 +16,8 @@ mix.setPublicPath('assets');
 
 mix.js('resources/js/theme.js', 'js')
     .extract(['jquery'])
-    .sass('resources/sass/theme.scss', 'css');
+    .sass('resources/sass/theme.scss', 'css')
+
+    .browserSync({
+        'proxy': 'http://malware-free.test'
+    });

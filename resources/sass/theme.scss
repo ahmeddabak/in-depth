@@ -1,4 +1,80 @@
 @import "variables";
-
 @import "~font-awesome/scss/font-awesome";
 @import "~bootstrap/scss/bootstrap";
+
+$light-white: rgb(236, 255, 250);
+$dark-black: rgba(18, 19, 15, 1);
+$orange: rgba(221, 110, 66, 1);
+$sugar: rgba(232, 218, 178, 1);
+$links: rgba(79, 109, 122, 1);
+
+body {
+    nav {
+        margin-bottom: 2em;
+    }
+
+    .content-area {
+
+        .main-content {
+
+            article.article {
+                position: relative;
+                margin-bottom: 2em;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: -1em;
+                    left: 0;
+                    right: 0;
+                    height: 0.5em;
+                    border-top: 1px solid black;
+                    z-index: -1;
+                }
+
+                .article-header {
+                    margin-bottom: 2em;
+
+                    .article-title {
+                        color: black;
+
+                        a {
+                            color: black;
+                        }
+                    }
+
+                    .article-meta {
+
+                    }
+                }
+
+                .article-image {
+                    max-height: 450px;
+                    overflow-y: hidden;
+                    margin-bottom: 1em;
+                }
+
+                .article-content {
+
+                }
+
+                .article-footer {
+
+                }
+
+            }
+        }
+    }
+
+    aside.sidebar {
+        padding: 2em;
+
+        .widget {
+            background-color: #e3e3e3;
+            padding: 1.5em;
+            margin-bottom: 2em;
+            overflow: hidden;
+        }
+    }
+
+}
