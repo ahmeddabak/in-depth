@@ -108,7 +108,7 @@ if ( ! function_exists( 'in_depth_post_thumbnail' ) ) :
  * Wraps the post thumbnail in an anchor element on index views, or a div
  * element when on single views.
  */
-function in_depth_post_thumbnail() {
+function in_depth_post_thumbnail($size = null) {
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 		return;
 	}
@@ -117,14 +117,14 @@ function in_depth_post_thumbnail() {
 	?>
 
 	<div class="post-thumbnail">
-		<?php the_post_thumbnail(); ?>
+		<?php the_post_thumbnail($size); ?>
 	</div><!-- .post-thumbnail -->
 
 	<?php else : ?>
 
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 		<?php
-			the_post_thumbnail( 'post-thumbnail', array(
+			the_post_thumbnail( $size ? $size :'post-thumbnail', array(
 				'alt' => the_title_attribute( array(
 					'echo' => false,
 				) ),

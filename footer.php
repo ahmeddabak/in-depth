@@ -11,7 +11,7 @@
 
 ?>
 
-	</div><!-- #content -->
+	</div><!-- #container-fluid -->
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
@@ -26,7 +26,7 @@
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-</div><!-- #page -->
+</div><!-- #app -->
 
 <?php wp_footer(); ?>
 

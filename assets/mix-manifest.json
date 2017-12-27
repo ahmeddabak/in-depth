@@ -1,4 +1,6 @@
 {
     "/js/theme.js": "/js/theme.js",
-    "/css/theme.css": "/css/theme.css"
+    "/css/theme.css": "/css/theme.css",
+    "/js/vendor.js": "/js/vendor.js",
+    "/js/manifest.js": "/js/manifest.js"
 }

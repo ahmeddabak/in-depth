@@ -13,6 +13,7 @@ if ( ! function_exists( 'asset' ) ) {
 
 function in_depth_enqueue_styles_and_scripts() {
 	wp_enqueue_style( 'theme', asset( 'css/theme.css' ), array(), null );
+	wp_enqueue_script( 'manifest', asset( 'js/manifest.js' ), array(), null );
 	wp_enqueue_script( 'vendor', asset( 'js/vendor.js' ), array(), null );
 	wp_enqueue_script( 'theme', asset( 'js/theme.js' ), array(), null, true );
 

@@ -15,4 +15,5 @@ mix.setPublicPath('assets');
  */
 
 mix.js('resources/js/theme.js', 'js')
+    .extract(['jquery'])
     .sass('resources/sass/theme.scss', 'css');

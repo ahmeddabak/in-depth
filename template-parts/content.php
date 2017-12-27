@@ -9,7 +9,8 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+<div class="col-md-9">
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -26,7 +27,7 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php in_depth_post_thumbnail(); ?>
+	<?php in_depth_post_thumbnail('large'); ?>
 
 	<div class="entry-content">
 		<?php
@@ -53,4 +54,5 @@
 	<footer class="entry-footer">
 		<?php in_depth_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+</div>
+

@@ -42,9 +42,7 @@ if ( ! function_exists( 'in_depth_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'in-depth' ),
-		) );
+		register_nav_menu( 'main-menu', esc_html__( 'Main Menu', 'in-depth' ) );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -81,7 +79,6 @@ if ( ! function_exists( 'in_depth_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'in_depth_setup' );
-
 
 
 // TODO require unyson

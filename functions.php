@@ -7,6 +7,12 @@
  * @package In_Depth
  */
 
+
+/**
+ * Load the autoloader
+ */
+require __DIR__ . '/vendor/autoload.php';
+
 /**
  * Setup theme
  */
@@ -60,3 +66,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/includes/woocommerce.php';
 }
+
+/**
+ * Load Bootstrap 4 Nav Walker
+ */
+require get_template_directory() . '/classes/class-bs4_walker_nav_menu.php';
+
+
